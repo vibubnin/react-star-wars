@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import classes from './PeopleList.module.css';
 
-export const PeopleList = ({ people }) => {
+const PeopleList = ({ people }) => {
   return (
     <ul className={classes.list}>
       {people.map(({ name, id, img }) => 
@@ -16,3 +17,9 @@ export const PeopleList = ({ people }) => {
     </ul>
   )
 }
+
+PeopleList.propTypes = {
+  people: PropTypes.array.isRequired
+}
+
+export { PeopleList }; 

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types';
+
 import { PeopleList } from '@components/PeoplePage/PeopleList';
 import { API_PEOPLE } from '@constants/api';
 import { withErrorApi } from '@hoc-helpers/withErrorApi';
@@ -35,10 +37,14 @@ const PeoplePage = ({ setErrorApi }) => {
 
   return (
     <>
-      <h1>Navigation</h1>
+      <h1 className="headerText">Navigation</h1>
       <PeopleList people={people}/>
     </>
   )
 }
+
+PeoplePage.propTypes = {
+  setErrorApi: PropTypes.func.isRequired
+};
 
 export default withErrorApi(PeoplePage);
