@@ -10,7 +10,7 @@ export const Header = () => {
           <NavLink to="/" exact>Home</NavLink>
         </li>
         <li>
-          <NavLink to="/people" exact>People</NavLink>
+          <NavLink to="/people/?page=1" exact>People</NavLink>
         </li>
         <li>
           <NavLink to="/not-found" exact>Not Found</NavLink>
