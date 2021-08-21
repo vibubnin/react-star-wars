@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cn from 'classnames'
 
-import '@ui/index.css'
+import '../index.css'
 import classes from './UiButton.module.css'
 
 const UiButton = ({
