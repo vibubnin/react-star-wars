@@ -2,15 +2,15 @@ import { useState } from "react";
 import { ErrorMessage } from "@components/ErrorMessage";
 
 export const withErrorApi = View => {
-  return props => {
+  return (props) => {
     const [errorApi, setErrorApi] = useState(false);
 
     return (
       <>
-        {errorApi 
+        {errorApi
           ? <ErrorMessage />
-          : <View setErrorApi={setErrorApi}  {...props}/>
-        } 
+          : <View setErrorApi={setErrorApi}  {...props} />
+        }
       </>
     )
   }

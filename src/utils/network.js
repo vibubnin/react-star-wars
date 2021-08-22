@@ -28,3 +28,10 @@ export const getApiResource = async (url) => {
     return false;
   }
 };
+
+export const makeConcurrentRequest = async (urls) =>
+  Promise.all(
+    urls.map((url) => {
+      return getApiResource(changeHTTP(url));
+    })
+  );
