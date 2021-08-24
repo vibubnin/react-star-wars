@@ -1,5 +1,6 @@
 import React, { useEffect, useState, Suspense } from 'react'
 import { useParams } from 'react-router';
+
 import { getApiResource } from '@utils/network';
 import { API_PERSON } from '@constants/api';
 import { withErrorApi } from '@hoc-helpers/withErrorApi';
@@ -54,7 +55,11 @@ const PersonPage = ({ setErrorApi }) => {
       <div className={classes.wrapper}>
         <span className={classes.person_name}>{personName}</span>
         <div className={classes.container}>
-          <PersonPhoto personName={personName} personPhoto={personPhoto} />
+          <PersonPhoto
+            personId={id}
+            personName={personName}
+            personPhoto={personPhoto}
+          />
           <PersonInfo personInfo={personInfo} />
           {personFims.length > 0 && (
             <Suspense fallback={<UiLoading theme="blue" isShadow />}>

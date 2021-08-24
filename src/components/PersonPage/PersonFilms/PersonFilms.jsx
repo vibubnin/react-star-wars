@@ -5,9 +5,6 @@ import classes from './PersonFilms.module.css';
 
 const PersonFilms = ({ personFims, setErrorApi }) => {
   const [films, setFilms] = useState([]);
-
-  console.log(films);
-
   useEffect(() => {
 
     (async () => {
