@@ -6,7 +6,7 @@ import { REPO_NAME } from '@constants/repo';
 
 export const App = () => {
   return (
-    <BrowserRouter basename={`/${REPO_NAME}/`}>
+    <BrowserRouter basename={`/${REPO_NAME}`}>
       <div className={classes.wrapper}>
         <Header />
         <Switch>
