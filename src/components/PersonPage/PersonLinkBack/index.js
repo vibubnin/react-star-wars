@@ -1,1 +1,0 @@
-export { PersonLinkBack } from "./PersonLinkBack";
